@@ -1,4 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');*/
 .countdownContainer {
   display: flex;
   align-items: center;
@@ -58,6 +57,21 @@
   transition: background-color 0.2s;
 }
 
-.countdownButtom:hover {
+.countdownButtom:not(:disabled):hover {
   background: var(--blue-dark);
+}
+
+.countdownButtomActive {
+  background: var(--white);
+  color: var(--title);
+}
+.countdownButtomActive:not(:disabled):hover {
+  background: var(--red);
+  color: var(--white);
+}
+
+.countdownButtom:disabled {
+  background: var(--white);
+  color: var(--text);
+  cursor: not-allowed;
 }
